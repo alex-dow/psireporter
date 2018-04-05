@@ -20,7 +20,7 @@ def test_reporter_plugin():
     assert Registry.HasEntry('reporters', 'test-id') is True
 
     nonIdReporter = [reporter for reporter in Registry.GetEntries('reporters') if reporter[0].endswith('TestReporter')]
-    assert len(nonIdReporter) is 1
+    assert len(nonIdReporter) is 4
 
 
 def test_outputer_plugin():
@@ -34,4 +34,4 @@ def test_outputer_plugin():
     assert Registry.HasEntry('outputters', 'outputter-id') is True
 
     nonIdOutputter = [o for o in Registry.GetEntries('outputters') if o[0].endswith('TestOutputter')]
-    assert len(nonIdOutputter) is 1
+    assert len(nonIdOutputter) is 4
