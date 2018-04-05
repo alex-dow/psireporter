@@ -34,4 +34,4 @@ def test_outputer_plugin():
     assert Registry.HasEntry('outputters', 'outputter-id') is True
 
     nonIdOutputter = [o for o in Registry.GetEntries('outputters') if o[0].endswith('TestOutputter')]
-    assert len(nonIdOutputter) is 1
+    assert len(nonIdOutputter) is 4
